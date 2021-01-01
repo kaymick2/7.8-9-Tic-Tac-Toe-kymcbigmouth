@@ -27,8 +27,9 @@ public class TicTacToe
    */
    public void set(int i, int j, String player)
    {
-      if (board[i][j].equals(" "))
+      if (board[i][j].equals(" ")){
          board[i][j] = player;
+      }
    }
 
    /**
@@ -50,4 +51,11 @@ public class TicTacToe
       }
       return r;
    }
+    public boolean occupied(int i, int j, String player) {
+      if(board[i][j].equals("x") || board[i][j].equals("o"))
+      {return true;
+      }else{
+        return false;
+      }
+    }
 }
